@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class AddImageToPdf {
-    public static final String SRC = "C:\\Users\\andronicus\\IdeaProjects\\QrcodeTest\\src\\main\\resources\\pdfs\\cert.pdf";
+    public static final String SRC = "C:\\Users\\andronicus\\IdeaProjects\\QrcodeTest\\src\\main\\resources\\pdfs\\certificate.pdf";
     //public static final String DEST = "results/stamper/hello_with_image_id.pdf";
     public static final String DEST = "C:\\Users\\andronicus\\IdeaProjects\\QrcodeTest\\src\\main\\resources\\pdfs\\result.pdf";
     public static final String IMG = "C:\\Users\\andronicus\\IdeaProjects\\QrcodeTest\\src\\main\\resources\\images\\qrcode.png";
