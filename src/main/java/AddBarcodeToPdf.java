@@ -22,7 +22,7 @@ public class AddBarcodeToPdf {
         PdfReader reader = new PdfReader(src);
         PdfStamper stamper = new PdfStamper(reader, new FileOutputStream(dest));
         Image image = Image.getInstance(IMG);
-        image.scalePercent(80);
+        image.scalePercent(70);
         PdfImage stream = new PdfImage(image, "", null);
         stream.put(new PdfName("ITXT_SpecialId"), new PdfName("123456789"));
         PdfIndirectObject ref = stamper.getWriter().addToBody(stream);

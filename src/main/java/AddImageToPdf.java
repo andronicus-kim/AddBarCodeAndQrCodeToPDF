@@ -21,12 +21,12 @@ public class AddImageToPdf {
         PdfReader reader = new PdfReader(src);
         PdfStamper stamper = new PdfStamper(reader, new FileOutputStream(dest));
         Image image = Image.getInstance(IMG);
-        image.scalePercent(50);
+        image.scalePercent(30);
         PdfImage stream = new PdfImage(image, "", null);
         stream.put(new PdfName("ITXT_SpecialId"), new PdfName("123456789"));
         PdfIndirectObject ref = stamper.getWriter().addToBody(stream);
         image.setDirectReference(ref.getIndirectReference());
-        image.setAbsolutePosition(100, 35);
+        image.setAbsolutePosition(120, 35);
         PdfContentByte over = stamper.getOverContent(1);
         over.addImage(image);
         stamper.close();
