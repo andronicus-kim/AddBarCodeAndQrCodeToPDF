@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class AddImageToPdf {
+public class AddQrcodeToPdf {
     public static final String SRC = "C:\\Users\\andronicus\\IdeaProjects\\QrcodeTest\\src\\main\\resources\\pdfs\\certificate.pdf";
     //public static final String DEST = "results/stamper/hello_with_image_id.pdf";
     public static final String DEST = "C:\\Users\\andronicus\\IdeaProjects\\QrcodeTest\\src\\main\\resources\\pdfs\\result.pdf";
@@ -14,7 +14,7 @@ public class AddImageToPdf {
     public static void main(String[] args) throws IOException, DocumentException {
         File file = new File(DEST);
         file.getParentFile().mkdirs();
-        new AddImageToPdf().manipulatePdf(SRC, DEST);
+        new AddQrcodeToPdf().manipulatePdf(SRC, DEST);
     }
 
     public void manipulatePdf(String src, String dest) throws IOException, DocumentException {
