@@ -10,7 +10,7 @@ public class AddBarcodeToPdf {
     public static final String SRC = "C:\\Users\\andronicus\\IdeaProjects\\QrcodeTest\\src\\main\\resources\\pdfs\\result.pdf";
     //public static final String DEST = "results/stamper/hello_with_image_id.pdf";
     public static final String DEST = "C:\\Users\\andronicus\\IdeaProjects\\QrcodeTest\\src\\main\\resources\\pdfs\\another_result.pdf";
-    public static final String IMG = "C:\\Users\\andronicus\\IdeaProjects\\QrcodeTest\\src\\main\\resources\\images\\barcode.png";
+    public static final String IMG = "C:\\Users\\andronicus\\IdeaProjects\\QrcodeTest\\src\\main\\resources\\images\\original.png";
 
     public static void main(String[] args) throws IOException, DocumentException {
         File file = new File(DEST);
@@ -22,6 +22,7 @@ public class AddBarcodeToPdf {
         PdfReader reader = new PdfReader(src);
         PdfStamper stamper = new PdfStamper(reader, new FileOutputStream(dest));
         Image image = Image.getInstance(IMG);
+        image.scalePercent(50);
         PdfImage stream = new PdfImage(image, "", null);
         stream.put(new PdfName("ITXT_SpecialId"), new PdfName("123456789"));
         PdfIndirectObject ref = stamper.getWriter().addToBody(stream);
