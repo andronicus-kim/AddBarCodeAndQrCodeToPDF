@@ -15,11 +15,5 @@
         <artifactId>itextpdf</artifactId>
         <version>5.0.6</version>
     </dependency>
-    <dependency>
-        <groupId>com.github.bumptech.glide</groupId>
-        <artifactId>glide</artifactId>
-        <version>3.4.0</version>
-        <type>aar</type>
-    </dependency>
     </dependencies>
 </project>
